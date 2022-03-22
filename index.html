@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox</title>
+    <style>
+        .main-container {
+            max-width: 500px;
+            width: 100%;
+            margin: 50px auto;
+        }
+        
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 0;
+        }
+        
+        .item {
+            border: 2px solid black;
+            font-family: Arial sans-serif;
+            margin: 5px 0;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .width100 {
+            width: 100%;
+        }
+        
+        .show-flex-container {
+            display: flex;
+            align-items: center;
+            height: 30vh;
+        }
+        
+        .container-content {
+            width: 60%;
+            padding-left: 20px;
+        }
+        
+        .container-sidebar {
+            width: 30%;
+            padding-left: 10px;
+        }
+        
+        .line-height-2 {
+            line-height: 2em;
+        }
+        
+        .line-height-4 {
+            line-height: 4em;
+        }
+    </style>
+    <!--<script src="js/scripts.js"></script>-->
+    <script src="js/09removeDuplicate.js"></script>
+    <!--<script src="js/getBase64FromUrl.js"></script>-->
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="item width100 line-height-4">HEADER</div>
+        <div class="item width100">NAVIGATION</div>
+        <div class="flex-container">
+            <div class="item container-content show-flex-container">
+                <p>CONTENT</p>
+            </div>
+            <div class="item container-sidebar show-flex-container">
+                <p>SIDEBAR</p>
+            </div>
+        </div>
+        <div class="item width100 line-height-2">FOOTER</div>
+    </div>
+    <div id="testing"></div>
+</body>
+
+</html>
