@@ -34,12 +34,11 @@ function NotificationException() {}
 function ErrorException() {}
 
 function primitiveMultiply(a, b) {
-    counter++;
     const rand = Math.random();
     if (rand < 0.5) {
         return a * b;
     } else if (rand > 0.85) {
-        throw new ErrorException()
+        //throw new ErrorException()
     } else {
         throw new NotificationException("Notif ex message");
     }
@@ -51,7 +50,7 @@ function reliableMultiply(a, b) {
     } catch (err) {
         if (err instanceof NotificationException) {
             console.log("NotificationException!");
-            return reliableMultiply(a, b);
+            return primitiveMultiply(a, b);
         }
     }
 }
