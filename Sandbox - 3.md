@@ -23,13 +23,19 @@
 
 Напишите набор команд с комментарием их работы которые вы примените для решения следующих задач:
 
-1. Перейдите в папку html и выведите список всех папок (без файлов)
+1. Перейдите в папку html и выведите список всех папок (без файлов) 
+    - cd html
+    - ls -d */
 2. Объедините все файлы с расширением .txt в один /all.txt
+    - cat *.txt > all.txt
 3. Удалите пустые строки из файла error.txt
+    - find . -name 'error.txt' -exec sed -ri '/^\s*$/d' {} \;
 4. Выведите список файлов с расширением .jpg в папке images
+    - find . -type f -name "*.jpg" 
 5. Удалите все содержимое в файле access.txt не удаляя сам файл
+    - > access.txt 
 6. Выведите список файлов в папке images размер которых более 2 мегабайт
-
+     - find -type f -size +2M
 **=== GIT ===**
 
 **Рабочее окружение**
@@ -39,6 +45,14 @@
 **Задание**
 
 Опишите ваши дальнейшие действия что бы ваш код появился в ветке master в репозитории [git@example.com](mailto:git@example.com):example/test.git
+В терминале набрать
+git remote add origin https://github.com/example/test.git
+git add .
+git config user.name "Some name"
+git config user.email "git@example.com"
+git commit -m "First commit"
+git branch -M master
+git push -u origin master
 
 **=== CSS, HTML ===**
 
